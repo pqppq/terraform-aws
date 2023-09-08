@@ -22,3 +22,7 @@ output "private_subnets_cidr_blocks" {
   description = "List of cidr_blocks of private subnets"
   value       = compact(aws_subnet.private[*].cidr_block)
 }
+
+output "eip" {
+  value = aws_eip.eip.id
+}
